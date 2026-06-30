@@ -4,6 +4,7 @@ const choice1El = document.getElementById("choice1");
 const choice2El = document.getElementById("choice2");
 const choice3El = document.getElementById("choice3");
 const choice4El = document.getElementById("choice4");
+const gameOverEl = document.getElementById("gameOver");
 
 console.log(questionEl);
 console.log(choice1El);
@@ -115,7 +116,13 @@ choices.forEach(function(choice) {
 function checkGameOver() {
     if (questionIndex === questions.length - 1) {
         console.log("Game Over");
+        gameOverEl.style.display = "block";
+
     }
+    else if (questionIndex === questions.length - 1) {
+    console.log("Game Over");
+    return;
+}
 }
 
 // 1. when the choice is correct give feedback that its correct like background color green
