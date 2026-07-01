@@ -5,7 +5,8 @@ const choice2El = document.getElementById("choice2");
 const choice3El = document.getElementById("choice3");
 const choice4El = document.getElementById("choice4");
 const gameOverEl = document.getElementById("gameOver");
-
+const questionContainer = document.querySelector('.container')
+const cardCategory = document.querySelector('.category-card')
 console.log(questionEl);
 console.log(choice1El);
 console.log(choice2El);
@@ -56,6 +57,8 @@ choice4El.style.backgroundColor = 'initial'
 
 }
 function start() {
+  cardCategory.classList.add('hidden')
+  questionContainer.classList.remove('hidden')
   console.log("Game Started");
 //   change the display of game over element to display block
   console.log(questions[questionIndex])
@@ -66,7 +69,7 @@ renderQuestions()
 
 }
 
-const startBtn = document.getElementById("startBtn");
+const startBtn = document.querySelector(".play-btn");
 
 startBtn.addEventListener("click", start);
 
