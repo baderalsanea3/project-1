@@ -80,6 +80,18 @@ function increaseLevel() {
         return;
     }
 
+    questionEl.classList.remove('#question')
+
+    void questionEl.offsetWidth
+    questionEl.classList.add('#question')
+
+
+    // questionEl.style.animationName = 'flipAnimation'
+    // questionEl.style.animationDuration = '1s'
+    // questionEl.style.animationTimingFunction = 'ease'
+    // questionEl.style.animationIterationCount = '1'
+    // questionEl.style.animationDirection = 'normal'
+    // questionEl.style.animationFillMode = 'both'
     questionIndex++;
     renderQuestions();
 }
